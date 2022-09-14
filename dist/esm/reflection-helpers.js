@@ -1,4 +1,5 @@
 export const INJECTION_TOKEN_METADATA_KEY = "injectionTokens";
+export const PARAM_INFOS_METADATA_KEY = "paramInfos";
 export function getParamInfo(target) {
     const params = Reflect.getMetadata("design:paramtypes", target) || [];
     const injectionTokens = Reflect.getOwnMetadata(INJECTION_TOKEN_METADATA_KEY, target) || {};

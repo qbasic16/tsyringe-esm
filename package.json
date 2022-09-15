@@ -4,16 +4,12 @@
   "description": "Lightweight dependency injection container for JavaScript/TypeScript",
   "type": "module",
   "exports": {
-    "node": {
-      "module": "./dist/esm/index.js",
-      "require": "./dist/cjs/index.cjs"
-    },
     "default": "./dist/esm/index.js"
   },
   "typings": "./dist/typings/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:types",
-    "build:cjs": "tsc -p ./typescript/tsconfig.cjs.json && renamer --path-element ext -f \".js\" -r \".cjs\" ./dist/cjs/**/*",
+    "build": "yarn clean && yarn build:esm && yarn build:types",
+    "build:cjs": "tsc -p ./typescript/tsconfig.cjs.json",
     "build:esm": "tsc -p ./typescript/tsconfig.esm.json",
     "build:types": "tsc -p ./typescript/tsconfig.types.json",
     "clean": "rimraf ./dist",

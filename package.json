@@ -8,7 +8,7 @@
   },
   "typings": "./dist/typings/index.d.ts",
   "scripts": {
-    "build": "yarn clean && yarn build:esm && yarn build:types",
+    "build": "yarn clean && yarn build:esm && yarn build:cjs && yarn build:types",
     "build:cjs": "tsc -p ./typescript/tsconfig.cjs.json",
     "build:esm": "tsc -p ./typescript/tsconfig.esm.json",
     "build:types": "tsc -p ./typescript/tsconfig.types.json",
